@@ -1,11 +1,36 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <html lang="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deepnote Portfolio</title>
+  <style>
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+      margin-bottom: 20px;
+    }
+  </style>
 </head>
 <body>
-  <img src=”/files/Portfolio.jpg” height=”1638” width=”1104”>
-  <meta http-equiv="refresh" content="0; URL=https://deepnote.com/@tomas-latrille">
-  <link rel="canonical" href="https://deepnote.com/@tomas-latrille">
+  <h1>Deepnote Portfolio</h1>
+
+  <script>
+    // List of URLs to display as iframes
+    const urls = [
+      "https://deepnote.com/app/tomas-latrille/Copper-impact-in-Exchange-Rate-0b96fffa-1af3-4061-bddb-635a6df6eeab",
+      "https://deepnote.com/app/tomas-latrille/Credit-Risk-Keras-GridSearchCV-3428f116-e22e-4539-bc2b-2f91ee89c04a?utm_source=share-modal&utm_medium=product-shared-content&utm_campaign=data-app",
+      "https://deepnote.com/app/tomas-latrille/Credit-Risk-Keras-GridSearchCV-3428f116-e22e-4539-bc2b-2f91ee89c04a?utm_source=share-modal&utm_medium=product-shared-content&utm_campaign=data-app"
+    ];
+
+    // Add each URL to the body as an iframe
+    const body = document.body;
+    urls.forEach(url => {
+      const iframe = document.createElement('iframe');
+      iframe.src = url;
+      body.appendChild(iframe);
+    });
+  </script>
 </body>
 </html>
